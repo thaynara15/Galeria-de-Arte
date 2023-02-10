@@ -67,6 +67,10 @@ body{
     margin-right: 15px;
     cursor: pointer;
 }
-.ballsdiv:hover{
+.balls div:hover{
+    background: #fff;
+}
+.imgAtual{
+    transition: all 0.5;
     background: #fff;
 }
