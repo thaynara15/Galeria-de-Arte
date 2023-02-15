@@ -1,4 +1,4 @@
-{
+*{
     margin: 0;
     padding: 0;
 }
@@ -19,6 +19,7 @@ body{
 }
 .slides{
     width: 5120px;
+    display: flex;
 }
 .image img{
     width: 1024px;
@@ -28,7 +29,7 @@ body{
     margin-left: 0;
     transition: all 2s;
 }
-.bnt{
+.btn{
     position: absolute;
     color: #fff;
     padding: 10px;
@@ -37,12 +38,12 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all o.4s;
+    transition: all 0.4s;
     font-size: 1.7em;
     margin-top: -5px;
 }
-.bnt:hover{
-    transform: scale(1.5);
+.btn:hover{
+    transform : scale(1.5);
 }
 #voltar{
     top: 50%;
