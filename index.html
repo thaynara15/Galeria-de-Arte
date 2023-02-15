@@ -5,30 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="slide.css"
-    <title>Galeria de Quadros - TAGI.</title>
+    <link rel="stylesheet" href="slide.css">
+    <title>Galeria de Artes - TAGI.</title>
 </head>
 <body>
     <div class="slide">
         <div class="slides">
 
-            <div id="voltar" class="bnt">
+            <div id="voltar" class="btn">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div id="next" class="bnt">
+            <div id="next" class="btn">
                 <i class="fas fa-chevrob-right"></i>
             </div>
 
-            <div id="atual" class="images">
+            <div id="atual" class="image">
                 <img src="0.png" alt="">
             </div>
-            <div class="images">
+            <div class="image">
                 <img src="1.png" alt="">
         </div>
-            <div class="images">
+            <div class="image">
                 <img src="2.png" alt="">
     </div>
-            <div class="images">
+            <div class="image">
                 <img src="3.png" alt="">
             </div>
         </div>
@@ -39,4 +39,12 @@
             <div id="3"></div>
     </div>
 </body>
+<script>
+    var balls = document.querySelector('.balls')
+    var quant = document.querySelectorAll('.slides .image')
+    var atual = 0
+    var imagem = document.getElementById('atual')
+    var next = document.getElementById('next')
+    var voltar = document.getElementById('voltar')
+</script>
 </html>
