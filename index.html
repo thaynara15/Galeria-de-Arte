@@ -9,89 +9,47 @@
     <title>Galeria de Artes - TAGI.</title>
 </head>
 <body>
-    <div class="slide">
-        <div class="slides">
+    <h1>GALERIA DE FOTOS - TAGI</h1>
 
-            <div id="voltar" class="btn">
-                <i class="fas fa-chevron-left"></i>
+    <main>
+        <div class="slide">
+            <div class="slides">
+    
+                <div id="voltar" class="btn">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div id="next" class="btn">
+                    <i class="fas fa-chevrob-right"></i>
+                </div>
+    
+                <div id="atual" class="image">
+                    <img src="0.png" alt="">
+                </div>
+    
+                <div class="image">
+                    <img src="1.png" alt="">
+                </div>
+    
+                <div class="image">
+                    <img src="2.png" alt="">
+                </div>
+    
+                <div class="image">
+                    <img src="3.png" alt="">
+                </div>
+                
             </div>
-            <div id="next" class="btn">
-                <i class="fas fa-chevrob-right"></i>
-            </div>
+            <div class="balls"></div>
+        </div>
+    </main>
 
-            <div id="atual" class="image">
-                <img src="0.png" alt="">
-            </div>
-            <div class="image">
-                <img src="1.png" alt="">
-        </div>
-            <div class="image">
-                <img src="2.png" alt="">
+    <div id="miniaturas_container">
+        <img class="miniaturas" src="0.png" alt="">
+        <img class="miniaturas" src="1.png" alt="">
+        <img class="miniaturas" src="2.png" alt="">
+        <img class="miniaturas" src="3.png" alt="">
     </div>
-            <div class="image">
-                <img src="3.png" alt="">
-            </div>
-        </div>
-        <div class="balls">
-           </div>
-    </div>
+
+    <script src="js.js"></script>
 </body>
-<script>
-    var balls = document.querySelector('.balls')
-    var quant = document.querySelectorAll('.slides .image')
-    var atual = 0
-    var imagem = document.getElementById('atual')
-    var next = document.getElementById('next')
-    var voltar = document.getElementById('voltar')
-    var rolar = true
-
-    for(let i=0; i < quant.length; i++){
-        var div = document.createElement('div')
-        div.id = i
-        balls.appendChild(div)
-    }
-    document.getElementById('0').classList.add('imgAtual')
-
-    var pos = document.querySelectorAll('.balls div')
-
-    for(let i=0; i< pos.length; i++){
-        pos[i].addEventListener('click', ()=>{
-            atual = pos[i].id
-            rolar = false
-            slide()
-        })
-    }
-
-    voltar.addEventListener('click', ()=>{
-        atual--
-        rolar = false
-        slide()
-    })
-    next.addEventListener('click', ()=>{
-        atual++
-        rolar = false
-        slide()
-    })
-
-    function slide(){
-        if(atual >= quant.length){
-            atual = 0
-        }
-        else if(atual <0){
-            atual = quant.length-1
-        }
-        document.querySelector('.imgAtual').classList.remove('imgAtual')
-        imagem.style.marginLeft = -1024*atual+'px'
-        document.getElementById(atual).classList.add('imgAtual')
-    }
-    setInterval(()=>{
-        if(rolar){
-            atual++
-            slide()
-        }
-        else{
-            rolar = true
-        }
-    },4000)
-</script>
 </html>
