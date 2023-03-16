@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(4, 21, 36);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 2vh;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.slide{
+    width: 1024px;
+    height: 576px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+}
+.slides{
+    width: 5120px;
+    display: flex;
+}
+.image img{
+    width: 1024px;
+    height: 576px;
+}
+#atual{
+    margin-left: 0;
+    transition: all 2s;
+}
+.btn{
+    position: absolute;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+}
+.btn:hover{
+    transform: scale(1.5);
+}
+#voltar{
+    top: 40%;
+    left: 10%;
+}
+#next{
+    top: 40%;
+    right: 10%;
+}
+
+.balls{
+    position: absolute;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+}
+.balls div{
+    transition: all 0.5s;
+    border: 3px solid #fff;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.balls div:hover{
+    background: #fff;
+}
+
+.imgAtual{
+    transition: all 0.5s;
+    background: #fff;
+}
+
+#miniaturas_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.miniaturas{
+    width: 20%;
+    margin-inline: 1.5vh;
+}
