@@ -36,9 +36,13 @@ main{
     width: 1024px;
     height: 576px;
 }
+
+/* REPRESENTA A IMAGEM QUE ESTÁ SENDO EXIBIDA */
 #atual{
     margin-left: 0;
     transition: all 2s;
+    /* CRIA A ANIMAÇÃO DO SLIDE */ 
+    /* all = TUDO */
 }
 .btn{
     position: absolute;
